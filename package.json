@@ -1,0 +1,27 @@
+{
+  "name": "bayesort",
+  "version": "1.0.0",
+  "description": "Offline Naive Bayes text classifier for local text folders, with verifiable splits and k-fold evaluation",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "demo": "node demo/seed.ts && node src/cli.ts train --corpus demo/corpus --model results/bayes-model.json && node src/cli.ts eval --corpus demo/corpus --folds 4"
+  },
+  "keywords": [
+    "naive-bayes",
+    "classifier",
+    "text-classification",
+    "offline",
+    "machine-learning"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
